@@ -19,7 +19,7 @@ def cat_matrices2D(mat1, mat2, axis=0):
         if axis == 1:
             for col in range(0, len(mat2[0])):
                 new_row.append(mat2[row][col])
-            new_matrix.append(new_row)
+        new_matrix.append(new_row)
     if axis == 0:
         for row in range(0, len(mat2)):
             new_row = []
