@@ -6,7 +6,7 @@ This module contains a function that returns the transpose of a matrix.
 
 def matrix_transpose(matrix):
     """transpose a matrix"""
-  
+
     row = len(matrix)
     col = len(matrix[0])
     new_matrix = []
