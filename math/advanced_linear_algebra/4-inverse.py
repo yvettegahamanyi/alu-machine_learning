@@ -13,7 +13,7 @@ def determinant(matrix):
         if type(row) is not list:
             raise TypeError("matrix must be a list of lists")
         if len(row) != len(matrix):
-            raise ValueError("matrix must be a spuare matrix")
+            raise ValueError("matrix must be a square matrix")
     if len(matrix) == 1:
         return matrix[0][0]
     if len(matrix) == 2:
@@ -90,7 +90,7 @@ def inverse(matrix):
     """ function to calculate inverse of a matrix"""
 
     if type(matrix) is not list or len(matrix) == 0:
-        raise TypeError("matrix must be a list of list")
+        raise TypeError("matrix must be a list of lists")
     for row in matrix:
         if type(row) is not list:
             raise TypeError("matrix must be a list of lists")
