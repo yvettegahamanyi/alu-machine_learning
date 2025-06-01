@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""this module contains a function to calculate the inverse of a matrix"""
+"""function to calculate the determinant of a matrix
+"""
 
 
 def determinant(matrix):
@@ -13,7 +14,7 @@ def determinant(matrix):
         if type(row) is not list:
             raise TypeError("matrix must be a list of lists")
         if len(row) != len(matrix):
-            raise ValueError("matrix must be a square matrix")
+            raise ValueError("matrix must be a spuare matrix")
     if len(matrix) == 1:
         return matrix[0][0]
     if len(matrix) == 2:
@@ -87,10 +88,12 @@ def adjugate(matrix):
 
 
 def inverse(matrix):
-    """ function to calculate inverse of a matrix"""
+    """function to calculate the inverse of a matrix
+    """
 
     if type(matrix) is not list or len(matrix) == 0:
         raise TypeError("matrix must be a list of lists")
+
     for row in matrix:
         if type(row) is not list:
             raise TypeError("matrix must be a list of lists")
@@ -99,6 +102,7 @@ def inverse(matrix):
 
     if len(matrix) == 1:
         return [[1]]
+
     det = determinant(matrix)
     if det == 0:
         return None
@@ -110,4 +114,5 @@ def inverse(matrix):
             val = col / det
             aux.append(val)
         inverse.append(aux)
+
     return inverse

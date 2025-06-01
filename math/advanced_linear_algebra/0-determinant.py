@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""this module contains a function to calculate the determinant of a matrix"""
+"""function to calculate the determinant of a matrix
+"""
 
 
 def determinant(matrix):
-    """function to calculate the determinant of a matrix"""
-
+    """function to calculate the determinant of a matrix
+    """
     if type(matrix) is not list or len(matrix) == 0:
         raise TypeError("matrix must be a list of lists")
     if len(matrix) == 1 and len(matrix[0]) == 0:
@@ -13,7 +14,7 @@ def determinant(matrix):
         if type(row) is not list:
             raise TypeError("matrix must be a list of lists")
         if len(row) != len(matrix):
-            raise ValueError("matrix must be a spuare matrix")
+            raise ValueError("matrix must be a square matrix")
     if len(matrix) == 1:
         return matrix[0][0]
     if len(matrix) == 2:
@@ -28,5 +29,5 @@ def determinant(matrix):
                 if c != i:
                     aux.append(row[c])
             aux_sub.append(aux)
-        det += (-1) ** i * j * determinant(aux_sub)
+        det += j * (-1) ** i * determinant(aux_sub)
     return det
