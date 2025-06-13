@@ -1,10 +1,12 @@
-ome f*cking docs
+#!/usr/bin/env python3
+"""
+documentation
 """
 
 
 def poly_integral(poly, C=0):
     """
-    some f*cking docs
+    documentation
     """
     if C is None or type(C) not in (int, float):
         return None
