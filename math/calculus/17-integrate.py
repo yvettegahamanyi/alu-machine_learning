@@ -42,4 +42,3 @@ def poly_integral(poly, C=0):
             inc_f -= 1
         return inty
     return None
-
