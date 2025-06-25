@@ -1,1 +1,1 @@
-math
+Multivariate Probability
