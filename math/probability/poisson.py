@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""a class Poisson that represents a poisson distribution"""
+"""
+Poisson distribution
+"""
+
 
 class Poisson:
-    """docs"""
+    """Poisson distribution class"""
 
     def __init__(self, data=None, lambtha=1.):
-        """a class Poisson that represents a poisson distribution"""
+        """Initialize the Poisson distribution."""
         if data is not None:
             if len(data) <= 2:
                 raise ValueError("data must contain multiple values")
@@ -20,7 +23,7 @@ class Poisson:
                 self.lambtha = float(lambtha)
 
     def pmf(self, k):
-        """docs"""
+        """Probability Mass Function (PMF) of the Poisson distribution."""
         k = int(k)
         if k < 0:
             return 0
@@ -35,7 +38,7 @@ class Poisson:
         return res
 
     def cdf(self, k):
-        """docs"""
+        """Cumulative Distribution Function (CDF) of the Poisson distribution."""
         k = int(k)
         if k < 0:
             return 0

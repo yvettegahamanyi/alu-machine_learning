@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""a class Binomial that represents a binomial distribution"""
+"""Binomial"""
+
 
 class Binomial():
-    """a class Binomial that represents a binomial distribution"""
+    """Binomial"""
 
     def __init__(self, data=None, n=1, p=0.5):
-        """docs"""
+        """Binomial"""
         if data is None:
             if n <= 0:
                 raise ValueError("n must be a positive value")
@@ -29,7 +30,7 @@ class Binomial():
                 self.p = mean / self.n
 
     def pmf(self, k):
-        """docs"""
+        """pmf function"""
         k = int(k)
         if k < 0:
             return 0
@@ -38,7 +39,7 @@ class Binomial():
             return ww * (self.p ** k) * ((1 - self.p) ** (self.n - k))
 
     def cdf(self, k):
-        """docs"""
+        """cdf function"""
         k = int(k)
         if k < 0:
             return 0
@@ -50,7 +51,7 @@ class Binomial():
 
 
 def factorial(k):
-    """docs"""
+    """factorial function"""
     if k == 0:
         return 1
     else:

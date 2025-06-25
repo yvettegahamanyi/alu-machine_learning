@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Initialize Normal"""
+"""Normal distribution"""
 
 
 class Normal():
-    """a class Normal that represents a normal distribution"""
+    """Normal distribution"""
 
     def __init__(self, data=None, mean=0., stddev=1.):
-        """doc"""
+        """Normal distribution"""
         if data is None:
             if stddev <= 0:
                 raise ValueError("stddev must be a positive value")
@@ -26,22 +26,22 @@ class Normal():
                 self.stddev = (std / len(data)) ** 0.5
 
     def z_score(self, x):
-        """doc"""
+        """Calculate the z-score of a value."""
         return (x - self.mean) / self.stddev
 
     def x_value(self, z):
-        """doc"""
+        """Calculate the x value from a z-score."""
         return self.stddev * z + self.mean
 
     def pdf(self, x):
-        """doc"""
+        """Probability density function (pdf) of the normal distribution."""
         sdsd = (2.71828182845904523536028 **
                 (-0.5 * ((x - self.mean)/self.stddev)**2))/(
             self.stddev * (2 * 3.1415926535897932384626) ** 0.5)
         return sdsd
 
     def cdf(self, x):
-        """doc"""
+        """Cumulative distribution function (cdf) of the normal distribution."""
         rr = (x - self.mean) / (self.stddev * (2 ** 0.5))
         trrt = (2/(3.1415926535897932384626)**0.5) * (rr - ((rr**3)/3) + (
             (rr**5)/10) - ((rr**7)/42) + ((rr**9)/216))
