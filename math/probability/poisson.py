@@ -23,7 +23,9 @@ class Poisson:
                 self.lambtha = float(lambtha)
 
     def pmf(self, k):
-        """Probability Mass Function (PMF) of the Poisson distribution."""
+        """Probability Mass Function (PMF) of 
+        the Poisson distribution.
+        """
         k = int(k)
         if k < 0:
             return 0
@@ -38,7 +40,9 @@ class Poisson:
         return res
 
     def cdf(self, k):
-        """Cumulative Distribution Function (CDF) of the Poisson distribution."""
+        """Cumulative Distribution Function (CDF) of 
+        the Poisson distribution.
+        """
         k = int(k)
         if k < 0:
             return 0

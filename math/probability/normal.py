@@ -34,14 +34,18 @@ class Normal():
         return self.stddev * z + self.mean
 
     def pdf(self, x):
-        """Probability density function (pdf) of the normal distribution."""
+        """Probability density function (pdf)
+        of the normal distribution.
+        """
         sdsd = (2.71828182845904523536028 **
                 (-0.5 * ((x - self.mean)/self.stddev)**2))/(
             self.stddev * (2 * 3.1415926535897932384626) ** 0.5)
         return sdsd
 
     def cdf(self, x):
-        """Cumulative distribution function (cdf) of the normal distribution."""
+        """Cumulative distribution function
+        (cdf) of the normal distribution.
+        """
         rr = (x - self.mean) / (self.stddev * (2 ** 0.5))
         trrt = (2/(3.1415926535897932384626)**0.5) * (rr - ((rr**3)/3) + (
             (rr**5)/10) - ((rr**7)/42) + ((rr**9)/216))
