@@ -1,5 +1,8 @@
-ass Poisson:
-    """a class Poisson that represents a poisson distribution"""
+#!/usr/bin/env python3
+"""a class Poisson that represents a poisson distribution"""
+
+class Poisson:
+"""docs"""
 
     def __init__(self, data=None, lambtha=1.):
         """a class Poisson that represents a poisson distribution"""
