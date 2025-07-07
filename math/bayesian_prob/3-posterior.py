@@ -53,7 +53,7 @@ def posterior(x, n, P, Pr):
     if np.any(P < 0) or np.any(P > 1):
         raise ValueError('All values in P must be in the range [0, 1]')
     if np.any(Pr < 0) or np.any(P > 1):
-        raise ValueError('All values in Pr must be in the range[0, 1]')
+        raise ValueError('All values in Pr must be in the range [0, 1]')
     if not np.isclose([np.sum(Pr)], [1.])[0]:
         raise ValueError('Pr must sum to 1')
     return (((np.math.factorial(n) /
